@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Main_Test_Suite">
+              <span class="suite-name border-passed">Main Test Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Main_Test_Suite">
+                    <span>C:\Users\austenjt\IdeaProjects\testng-custom-report-example\target\test-classes\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Main_Test_Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Main_Test_Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Main_Test_Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Main_Test_Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Main_Test_Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Main_Test_Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">16 methods,   16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Main_Test_Suite" class="hide-methods passed suite-Main_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Main_Test_Suite -->
+                      <a href="#" panel-name="suite-Main_Test_Suite" class="show-methods passed suite-Main_Test_Suite"> (show)</a> <!-- show-methods passed suite-Main_Test_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Main_Test_Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests2" hash-for-method="arraysFailures_1">arraysFailures_1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests1" hash-for-method="arraysFailures_1">arraysFailures_1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests1" hash-for-method="arraysFailures_2">arraysFailures_2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests2" hash-for-method="arraysFailures_2">arraysFailures_2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests2" hash-for-method="arraysFailures_3">arraysFailures_3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests1" hash-for-method="arraysFailures_3">arraysFailures_3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests2" hash-for-method="intArray_Issue4">intArray_Issue4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests1" hash-for-method="intArray_Issue4">intArray_Issue4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests2" hash-for-method="int_Integer_Arrays">int_Integer_Arrays</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests1" hash-for-method="int_Integer_Arrays">int_Integer_Arrays</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests1" hash-for-method="noOrderFailure">noOrderFailure</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests2" hash-for-method="noOrderFailure">noOrderFailure</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests2" hash-for-method="noOrderSuccess">noOrderSuccess</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests1" hash-for-method="noOrderSuccess">noOrderSuccess</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests2" hash-for-method="setsSuccess">setsSuccess</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Main_Test_Suite" title="qa.tests.AssertTests1" hash-for-method="setsSuccess">setsSuccess</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Main_Test_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Main_Test_Suite" class="panel Main_Test_Suite">
+          <div class="suite-Main_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">qa.tests.AssertTests1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="arraysFailures_1">
+                  </a> <!-- arraysFailures_1 -->
+                  <span class="method-name">arraysFailures_1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="arraysFailures_2">
+                  </a> <!-- arraysFailures_2 -->
+                  <span class="method-name">arraysFailures_2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="arraysFailures_3">
+                  </a> <!-- arraysFailures_3 -->
+                  <span class="method-name">arraysFailures_3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="intArray_Issue4">
+                  </a> <!-- intArray_Issue4 -->
+                  <span class="method-name">intArray_Issue4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="int_Integer_Arrays">
+                  </a> <!-- int_Integer_Arrays -->
+                  <span class="method-name">int_Integer_Arrays</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="noOrderFailure">
+                  </a> <!-- noOrderFailure -->
+                  <span class="method-name">noOrderFailure</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="noOrderSuccess">
+                  </a> <!-- noOrderSuccess -->
+                  <span class="method-name">noOrderSuccess</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setsSuccess">
+                  </a> <!-- setsSuccess -->
+                  <span class="method-name">setsSuccess</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Main_Test_Suite-class-passed -->
+          <div class="suite-Main_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">qa.tests.AssertTests2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="arraysFailures_1">
+                  </a> <!-- arraysFailures_1 -->
+                  <span class="method-name">arraysFailures_1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="arraysFailures_2">
+                  </a> <!-- arraysFailures_2 -->
+                  <span class="method-name">arraysFailures_2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="arraysFailures_3">
+                  </a> <!-- arraysFailures_3 -->
+                  <span class="method-name">arraysFailures_3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="intArray_Issue4">
+                  </a> <!-- intArray_Issue4 -->
+                  <span class="method-name">intArray_Issue4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="int_Integer_Arrays">
+                  </a> <!-- int_Integer_Arrays -->
+                  <span class="method-name">int_Integer_Arrays</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="noOrderFailure">
+                  </a> <!-- noOrderFailure -->
+                  <span class="method-name">noOrderFailure</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="noOrderSuccess">
+                  </a> <!-- noOrderSuccess -->
+                  <span class="method-name">noOrderSuccess</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setsSuccess">
+                  </a> <!-- setsSuccess -->
+                  <span class="method-name">setsSuccess</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Main_Test_Suite-class-passed -->
+        </div> <!-- panel Main_Test_Suite -->
+        <div panel-name="test-xml-Main_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\austenjt\IdeaProjects\testng-custom-report-example\target\test-classes\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;10&quot; verbose=&quot;0&quot; name=&quot;Main Test Suite&quot; parallel=&quot;classes&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;qa.test.CustomReport&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;Main Test Group&quot;&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;qa.tests&quot;/&gt;
+    &lt;/packages&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;qa.tests.AssertTests1&quot;/&gt;
+      &lt;class name=&quot;qa.tests.AssertTests2&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Main Test Group --&gt;
+&lt;/suite&gt; &lt;!-- Main Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Main_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Main Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Main Test Group (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Main_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Main Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Main_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Main Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Main_Test_Suite');
+function tableData_Main_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(16);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'setsSuccess')
+data.setCell(0, 2, 'qa.tests.AssertTests1')
+data.setCell(0, 3, 2628);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'noOrderSuccess')
+data.setCell(1, 2, 'qa.tests.AssertTests2')
+data.setCell(1, 3, 2579);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'noOrderFailure')
+data.setCell(2, 2, 'qa.tests.AssertTests2')
+data.setCell(2, 3, 2510);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'arraysFailures_3')
+data.setCell(3, 2, 'qa.tests.AssertTests2')
+data.setCell(3, 3, 2461);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'noOrderFailure')
+data.setCell(4, 2, 'qa.tests.AssertTests1')
+data.setCell(4, 3, 2264);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'int_Integer_Arrays')
+data.setCell(5, 2, 'qa.tests.AssertTests2')
+data.setCell(5, 3, 2134);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'intArray_Issue4')
+data.setCell(6, 2, 'qa.tests.AssertTests1')
+data.setCell(6, 3, 1994);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'intArray_Issue4')
+data.setCell(7, 2, 'qa.tests.AssertTests2')
+data.setCell(7, 3, 1783);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'arraysFailures_2')
+data.setCell(8, 2, 'qa.tests.AssertTests1')
+data.setCell(8, 3, 1724);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'arraysFailures_2')
+data.setCell(9, 2, 'qa.tests.AssertTests2')
+data.setCell(9, 3, 1616);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'int_Integer_Arrays')
+data.setCell(10, 2, 'qa.tests.AssertTests1')
+data.setCell(10, 3, 1487);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'noOrderSuccess')
+data.setCell(11, 2, 'qa.tests.AssertTests1')
+data.setCell(11, 3, 1050);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'arraysFailures_1')
+data.setCell(12, 2, 'qa.tests.AssertTests1')
+data.setCell(12, 3, 797);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'setsSuccess')
+data.setCell(13, 2, 'qa.tests.AssertTests2')
+data.setCell(13, 3, 746);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'arraysFailures_1')
+data.setCell(14, 2, 'qa.tests.AssertTests2')
+data.setCell(14, 3, 564);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'arraysFailures_3')
+data.setCell(15, 2, 'qa.tests.AssertTests1')
+data.setCell(15, 3, 558);
+window.suiteTableData['Main_Test_Suite']= { tableData: data, tableDiv: 'times-div-Main_Test_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <div id="times-div-Main_Test_Suite">
+              </div> <!-- times-div-Main_Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Main_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Main Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Main_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Main_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">arraysFailures_1</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">arraysFailures_1</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">arraysFailures_2</span>
+                <span class="method-start">565 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">arraysFailures_2</span>
+                <span class="method-start">798 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">arraysFailures_3</span>
+                <span class="method-start">2182 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">arraysFailures_3</span>
+                <span class="method-start">2523 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">intArray_Issue4</span>
+                <span class="method-start">3081 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">intArray_Issue4</span>
+                <span class="method-start">4643 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">int_Integer_Arrays</span>
+                <span class="method-start">5075 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">int_Integer_Arrays</span>
+                <span class="method-start">6426 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">noOrderFailure</span>
+                <span class="method-start">6562 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">noOrderFailure</span>
+                <span class="method-start">8560 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">noOrderSuccess</span>
+                <span class="method-start">8827 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setsSuccess</span>
+                <span class="method-start">9878 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">qa.tests.AssertTests2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">noOrderSuccess</span>
+                <span class="method-start">11070 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setsSuccess</span>
+                <span class="method-start">13649 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
