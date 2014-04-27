@@ -1,7 +1,7 @@
 testng-custom-report-example
 ============================
 
-Example of customized TestNG report.
+Example of customized TestNG report. Based on TestNG built-in implementation: ```org.testng.reporters.EmailableReporter2```. 
 
 Created on Intellij-IDEA 13.1
 
