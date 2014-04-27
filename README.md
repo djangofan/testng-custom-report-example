@@ -5,6 +5,14 @@ Example of customized TestNG report.
 
 Created on Intellij-IDEA 13.1
 
+features
+=========================
+
+1. Total suite time is displayed in seconds rather than milliseconds.
+2. Each test start time is shown in human readable form.
+3. Each test duration is shown in seconds.
+4. Report name and date is shown at the top.
+
 example 
 =========================
 
