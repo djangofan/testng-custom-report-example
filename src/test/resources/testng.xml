@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Main Test Suite" verbose="5" parallel="classes" thread-count="10">
+    <listeners>
+        <listener class-name="qa.test.CustomReport" />
+    </listeners>
+    <test name="Main Test Group">
+        <packages>
+            <package name="qa.tests" />
+        </packages>
+    </test>
+</suite>
