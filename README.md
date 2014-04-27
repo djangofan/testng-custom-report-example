@@ -16,4 +16,4 @@ features
 example 
 =========================
 
-![Alt text](rendered-example.png?raw=true "Rendered Example")
+![Alt text](https://raw.githubusercontent.com/djangofan/testng-custom-report-example/master/rendered-example.png "Rendered Example")
