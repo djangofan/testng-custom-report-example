@@ -137,7 +137,7 @@ public class CustomReport implements IReporter {
         int testIndex = 0;
         for ( SuiteResult suiteResult : suiteResults ) {
             writer.print("<tr><th colspan=\"7\">");
-            writer.print(Utils.escapeHtml(suiteResult.getSuiteName()));
+            writer.print( Utils.escapeHtml( suiteResult.getSuiteName() ) );
             writer.print("</th></tr>");
 
             for ( TestResult testResult : suiteResult.getTestResults() ) {
@@ -153,18 +153,14 @@ public class CustomReport implements IReporter {
                 writer.print(">");
 
                 buffer.setLength(0);
-                writeTableData(buffer.append("<a href=\"#t").append(testIndex)
-                        .append("\">")
-                        .append(Utils.escapeHtml(testResult.getTestName()))
-                        .append("</a>").toString());
-                writeTableData(integerFormat.format(passedTests), "num");
-                writeTableData(integerFormat.format(skippedTests),
-                        (skippedTests > 0 ? "num attn" : "num"));
-                writeTableData(integerFormat.format(failedTests),
-                        (failedTests > 0 ? "num attn" : "num"));
-                writeTableData(decimalFormat.format(millisecondsToSeconds(duration)), "num");
-                writeTableData(testResult.getIncludedGroups());
-                writeTableData(testResult.getExcludedGroups());
+                writeTableData( buffer.append("<a href=\"#t").append(testIndex).append("\">")
+                    .append(Utils.escapeHtml(testResult.getTestName())).append("</a>").toString());
+                writeTableData( integerFormat.format(passedTests), "num");
+                writeTableData( integerFormat.format(skippedTests), (skippedTests > 0 ? "num attn" : "num"));
+                writeTableData( integerFormat.format(failedTests), (failedTests > 0 ? "num attn" : "num"));
+                writeTableData( decimalFormat.format(millisecondsToSeconds(duration)), "num");
+                writeTableData( testResult.getIncludedGroups() );
+                writeTableData( testResult.getExcludedGroups() );
 
                 writer.print("</tr>");
 
@@ -181,12 +177,10 @@ public class CustomReport implements IReporter {
         if ( testIndex >= 1 ) {
             writer.print("<tr>");
             writer.print("<th>Total</th>");
-            writeTableHeader(integerFormat.format(totalPassedTests), "num");
-            writeTableHeader(integerFormat.format(totalSkippedTests),
-                    (totalSkippedTests > 0 ? "num attn" : "num"));
-            writeTableHeader(integerFormat.format(totalFailedTests),
-                    (totalFailedTests > 0 ? "num attn" : "num"));
-            writeTableHeader(decimalFormat.format(millisecondsToSeconds(totalDuration)), "num");
+            writeTableHeader( integerFormat.format(totalPassedTests), "num");
+            writeTableHeader( integerFormat.format(totalSkippedTests), (totalSkippedTests > 0 ? "num attn" : "num"));
+            writeTableHeader( integerFormat.format(totalFailedTests), (totalFailedTests > 0 ? "num attn" : "num"));
+            writeTableHeader( decimalFormat.format(millisecondsToSeconds(totalDuration)), "num");
             writer.print("<th colspan=\"2\"></th>");
             writer.print("</tr>");
         }
@@ -212,10 +206,10 @@ public class CustomReport implements IReporter {
         int scenarioIndex = 0;
         for ( SuiteResult suiteResult : suiteResults ) {
             writer.print("<tbody><tr><th colspan=\"4\">");
-            writer.print(Utils.escapeHtml(suiteResult.getSuiteName()));
+            writer.print( Utils.escapeHtml( suiteResult.getSuiteName() ) );
             writer.print("</th></tr></tbody>");
 
-            for (TestResult testResult : suiteResult.getTestResults()) {
+            for ( TestResult testResult : suiteResult.getTestResults() ) {
                 writer.print("<tbody id=\"t");
                 writer.print(testIndex);
                 writer.print("\">");
@@ -223,26 +217,26 @@ public class CustomReport implements IReporter {
                 String testName = Utils.escapeHtml(testResult.getTestName());
 
                 scenarioIndex += writeScenarioSummary(testName
-                                + " &#8212; failed (configuration methods)",
+                        + " &#8212; failed (configuration methods)",
                         testResult.getFailedConfigurationResults(), "failed",
                         scenarioIndex
                 );
                 scenarioIndex += writeScenarioSummary(testName
-                                + " &#8212; failed", testResult.getFailedTestResults(),
+                        + " &#8212; failed", testResult.getFailedTestResults(),
                         "failed", scenarioIndex
                 );
                 scenarioIndex += writeScenarioSummary(testName
-                                + " &#8212; skipped (configuration methods)",
+                        + " &#8212; skipped (configuration methods)",
                         testResult.getSkippedConfigurationResults(), "skipped",
                         scenarioIndex
                 );
                 scenarioIndex += writeScenarioSummary(testName
-                                + " &#8212; skipped",
+                        + " &#8212; skipped",
                         testResult.getSkippedTestResults(), "skipped",
                         scenarioIndex
                 );
                 scenarioIndex += writeScenarioSummary(testName
-                                + " &#8212; passed", testResult.getPassedTestResults(),
+                        + " &#8212; passed", testResult.getPassedTestResults(),
                         "passed", scenarioIndex
                 );
 
@@ -259,9 +253,8 @@ public class CustomReport implements IReporter {
      * Writes the scenario summary for the results of a given state for a single
      * test.
      */
-    private int writeScenarioSummary(String description,
-                                     List<ClassResult> classResults, String cssClassPrefix,
-                                     int startingScenarioIndex) {
+    private int writeScenarioSummary( String description, List<ClassResult> classResults,
+                                     String cssClassPrefix, int startingScenarioIndex ) {
         int scenarioCount = 0;
         if (!classResults.isEmpty()) {
             writer.print("<tr><th colspan=\"4\">");
@@ -270,22 +263,20 @@ public class CustomReport implements IReporter {
 
             int scenarioIndex = startingScenarioIndex;
             int classIndex = 0;
-            for (ClassResult classResult : classResults) {
-                String cssClass = cssClassPrefix
-                        + ((classIndex % 2) == 0 ? "even" : "odd");
+            for ( ClassResult classResult : classResults ) {
+                String cssClass = cssClassPrefix + ((classIndex % 2) == 0 ? "even" : "odd");
 
                 buffer.setLength(0);
 
                 int scenariosPerClass = 0;
                 int methodIndex = 0;
-                for (MethodResult methodResult : classResult.getMethodResults()) {
+                for ( MethodResult methodResult : classResult.getMethodResults() ) {
                     List<ITestResult> results = methodResult.getResults();
                     int resultsCount = results.size();
                     assert resultsCount > 0;
 
                     ITestResult firstResult = results.iterator().next();
-                    String methodName = Utils.escapeHtml(firstResult
-                            .getMethod().getMethodName());
+                    String methodName = Utils.escapeHtml(firstResult.getMethod().getMethodName());
                     long start = firstResult.getStartMillis();
                     long duration = firstResult.getEndMillis() - start;
 
@@ -309,7 +300,7 @@ public class CustomReport implements IReporter {
                     scenarioIndex++;
 
                     // Write the remaining scenarios for the method
-                    for (int i = 1; i < resultsCount; i++) {
+                    for ( int i = 1; i < resultsCount; i++ ) {
                         buffer.append("<tr class=\"").append(cssClass)
                                 .append("\">").append("<td><a href=\"#m")
                                 .append(scenarioIndex).append("\">")
@@ -344,20 +335,18 @@ public class CustomReport implements IReporter {
      */
     protected void writeScenarioDetails() {
         int scenarioIndex = 0;
-        for (SuiteResult suiteResult : suiteResults) {
-            for (TestResult testResult : suiteResult.getTestResults()) {
+        for ( SuiteResult suiteResult : suiteResults ) {
+            for ( TestResult testResult : suiteResult.getTestResults() ) {
                 writer.print("<h2>");
-                writer.print(Utils.escapeHtml(testResult.getTestName()));
+                writer.print( Utils.escapeHtml( testResult.getTestName() ) );
                 writer.print("</h2>");
 
                 scenarioIndex += writeScenarioDetails(
-                        testResult.getFailedConfigurationResults(),
-                        scenarioIndex);
+                        testResult.getFailedConfigurationResults(), scenarioIndex);
                 scenarioIndex += writeScenarioDetails(
                         testResult.getFailedTestResults(), scenarioIndex);
                 scenarioIndex += writeScenarioDetails(
-                        testResult.getSkippedConfigurationResults(),
-                        scenarioIndex);
+                        testResult.getSkippedConfigurationResults(), scenarioIndex);
                 scenarioIndex += writeScenarioDetails(
                         testResult.getSkippedTestResults(), scenarioIndex);
                 scenarioIndex += writeScenarioDetails(
@@ -370,20 +359,16 @@ public class CustomReport implements IReporter {
      * Writes the scenario details for the results of a given state for a single
      * test.
      */
-    private int writeScenarioDetails(List<ClassResult> classResults,
-                                     int startingScenarioIndex) {
+    private int writeScenarioDetails( List<ClassResult> classResults, int startingScenarioIndex ) {
         int scenarioIndex = startingScenarioIndex;
-        for (ClassResult classResult : classResults) {
+        for ( ClassResult classResult : classResults ) {
             String className = classResult.getClassName();
-            for (MethodResult methodResult : classResult.getMethodResults()) {
+            for ( MethodResult methodResult : classResult.getMethodResults() ) {
                 List<ITestResult> results = methodResult.getResults();
                 assert !results.isEmpty();
 
-                String label = Utils
-                        .escapeHtml(className
-                                + "#"
-                                + results.iterator().next().getMethod()
-                                .getMethodName());
+                String label = Utils.escapeHtml( className + "#"
+                     + results.iterator().next().getMethod().getMethodName());
                 for (ITestResult result : results) {
                     writeScenario(scenarioIndex, label, result);
                     scenarioIndex++;
@@ -420,7 +405,7 @@ public class CustomReport implements IReporter {
             writer.print("</tr><tr class=\"param stripe\">");
             for (Object parameter : parameters) {
                 writer.print("<td>");
-                writer.print(Utils.escapeHtml(Utils.toString(parameter)));
+                writer.print( Utils.escapeHtml( Utils.toString( parameter, Object.class ) ) );
                 writer.print("</td>");
             }
             writer.print("</tr>");

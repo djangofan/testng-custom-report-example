@@ -2,18 +2,18 @@
 <testng-results skipped="0" failed="0" total="16" passed="16">
   <reporter-output>
   </reporter-output>
-  <suite name="Main Test Suite" duration-ms="14406" started-at="2014-04-27T22:20:46Z" finished-at="2014-04-27T22:21:00Z">
+  <suite name="Main Test Suite" duration-ms="15074" started-at="2014-04-28T15:02:37Z" finished-at="2014-04-28T15:02:52Z">
     <groups>
     </groups>
-    <test name="Main Test Group" duration-ms="14406" started-at="2014-04-27T22:20:46Z" finished-at="2014-04-27T22:21:00Z">
+    <test name="Main Test Group" duration-ms="15074" started-at="2014-04-28T15:02:37Z" finished-at="2014-04-28T15:02:52Z">
       <class name="qa.tests.AssertTests1">
-        <test-method status="PASS" signature="arraysFailures_1()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="arraysFailures_1" duration-ms="797" started-at="2014-04-27T15:20:46Z" finished-at="2014-04-27T15:20:47Z">
+        <test-method status="PASS" signature="arraysFailures_1()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="arraysFailures_1" duration-ms="2375" started-at="2014-04-28T08:02:37Z" finished-at="2014-04-28T08:02:39Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[ expected [[J@2108b77f] but found [[I@6809ff90]]]>
+              <![CDATA[ expected [[J@616f7563] but found [[I@70175e5d]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError:  expected [[J@2108b77f] but found [[I@6809ff90]
+              <![CDATA[java.lang.AssertionError:  expected [[J@616f7563] but found [[I@70175e5d]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertArrayEquals(Assert.java:144)
@@ -39,13 +39,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arraysFailures_1 -->
-        <test-method status="PASS" signature="arraysFailures_2()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="arraysFailures_2" duration-ms="1724" started-at="2014-04-27T15:20:47Z" finished-at="2014-04-27T15:20:48Z">
+        <test-method status="PASS" signature="arraysFailures_2()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="arraysFailures_2" duration-ms="1995" started-at="2014-04-28T08:02:39Z" finished-at="2014-04-28T08:02:41Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [1] but found [[I@64df56c7]]]>
+              <![CDATA[expected [1] but found [[I@19354406]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [1] but found [[I@64df56c7]
+              <![CDATA[java.lang.AssertionError: expected [1] but found [[I@19354406]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
@@ -70,13 +70,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arraysFailures_2 -->
-        <test-method status="PASS" signature="arraysFailures_3()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="arraysFailures_3" duration-ms="558" started-at="2014-04-27T15:20:48Z" finished-at="2014-04-27T15:20:49Z">
+        <test-method status="PASS" signature="arraysFailures_3()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="arraysFailures_3" duration-ms="2483" started-at="2014-04-28T08:02:41Z" finished-at="2014-04-28T08:02:44Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [[J@27da3c92] but found [1]]]>
+              <![CDATA[expected [[J@49c4ada8] but found [1]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [[J@27da3c92] but found [1]
+              <![CDATA[java.lang.AssertionError: expected [[J@49c4ada8] but found [1]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertArrayEquals(Assert.java:155)
@@ -102,15 +102,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arraysFailures_3 -->
-        <test-method status="PASS" signature="intArray_Issue4()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="intArray_Issue4" duration-ms="1994" started-at="2014-04-27T15:20:49Z" finished-at="2014-04-27T15:20:51Z">
+        <test-method status="PASS" signature="intArray_Issue4()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="intArray_Issue4" duration-ms="1016" started-at="2014-04-28T08:02:44Z" finished-at="2014-04-28T08:02:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intArray_Issue4 -->
-        <test-method status="PASS" signature="int_Integer_Arrays()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="int_Integer_Arrays" duration-ms="1487" started-at="2014-04-27T15:20:51Z" finished-at="2014-04-27T15:20:53Z">
+        <test-method status="PASS" signature="int_Integer_Arrays()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="int_Integer_Arrays" duration-ms="1041" started-at="2014-04-28T08:02:45Z" finished-at="2014-04-28T08:02:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- int_Integer_Arrays -->
-        <test-method status="PASS" signature="noOrderFailure()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="noOrderFailure" duration-ms="2264" started-at="2014-04-27T15:20:53Z" finished-at="2014-04-27T15:20:55Z">
+        <test-method status="PASS" signature="noOrderFailure()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="noOrderFailure" duration-ms="2035" started-at="2014-04-28T08:02:46Z" finished-at="2014-04-28T08:02:48Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Arrays not equal: [a, b, b] and [a, a, b]]]>
@@ -141,23 +141,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noOrderFailure -->
-        <test-method status="PASS" signature="noOrderSuccess()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="noOrderSuccess" duration-ms="1050" started-at="2014-04-27T15:20:55Z" finished-at="2014-04-27T15:20:56Z">
+        <test-method status="PASS" signature="noOrderSuccess()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="noOrderSuccess" duration-ms="1212" started-at="2014-04-28T08:02:48Z" finished-at="2014-04-28T08:02:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noOrderSuccess -->
-        <test-method status="PASS" signature="setsSuccess()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="setsSuccess" duration-ms="2628" started-at="2014-04-27T15:20:56Z" finished-at="2014-04-27T15:20:58Z">
+        <test-method status="PASS" signature="setsSuccess()[pri:0, instance:qa.tests.AssertTests1@546a03af]" name="setsSuccess" duration-ms="2801" started-at="2014-04-28T08:02:49Z" finished-at="2014-04-28T08:02:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setsSuccess -->
       </class> <!-- qa.tests.AssertTests1 -->
       <class name="qa.tests.AssertTests2">
-        <test-method status="PASS" signature="arraysFailures_1()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="arraysFailures_1" duration-ms="564" started-at="2014-04-27T15:20:46Z" finished-at="2014-04-27T15:20:47Z">
+        <test-method status="PASS" signature="arraysFailures_1()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="arraysFailures_1" duration-ms="2488" started-at="2014-04-28T08:02:37Z" finished-at="2014-04-28T08:02:39Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[ expected [[J@6069d34c] but found [[I@376fcc05]]]>
+              <![CDATA[ expected [[J@4f83fd11] but found [[I@63607386]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError:  expected [[J@6069d34c] but found [[I@376fcc05]
+              <![CDATA[java.lang.AssertionError:  expected [[J@4f83fd11] but found [[I@63607386]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertArrayEquals(Assert.java:144)
@@ -183,13 +183,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arraysFailures_1 -->
-        <test-method status="PASS" signature="arraysFailures_2()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="arraysFailures_2" duration-ms="1616" started-at="2014-04-27T15:20:47Z" finished-at="2014-04-27T15:20:48Z">
+        <test-method status="PASS" signature="arraysFailures_2()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="arraysFailures_2" duration-ms="1078" started-at="2014-04-28T08:02:39Z" finished-at="2014-04-28T08:02:40Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [1] but found [[I@730b2690]]]>
+              <![CDATA[expected [1] but found [[I@dac9561]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [1] but found [[I@730b2690]
+              <![CDATA[java.lang.AssertionError: expected [1] but found [[I@dac9561]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
@@ -214,13 +214,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arraysFailures_2 -->
-        <test-method status="PASS" signature="arraysFailures_3()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="arraysFailures_3" duration-ms="2461" started-at="2014-04-27T15:20:48Z" finished-at="2014-04-27T15:20:51Z">
+        <test-method status="PASS" signature="arraysFailures_3()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="arraysFailures_3" duration-ms="2243" started-at="2014-04-28T08:02:40Z" finished-at="2014-04-28T08:02:42Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [[J@14908855] but found [1]]]>
+              <![CDATA[expected [[J@3d0b2ed7] but found [1]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [[J@14908855] but found [1]
+              <![CDATA[java.lang.AssertionError: expected [[J@3d0b2ed7] but found [1]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertArrayEquals(Assert.java:155)
@@ -246,15 +246,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- arraysFailures_3 -->
-        <test-method status="PASS" signature="intArray_Issue4()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="intArray_Issue4" duration-ms="1783" started-at="2014-04-27T15:20:51Z" finished-at="2014-04-27T15:20:52Z">
+        <test-method status="PASS" signature="intArray_Issue4()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="intArray_Issue4" duration-ms="2437" started-at="2014-04-28T08:02:42Z" finished-at="2014-04-28T08:02:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intArray_Issue4 -->
-        <test-method status="PASS" signature="int_Integer_Arrays()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="int_Integer_Arrays" duration-ms="2134" started-at="2014-04-27T15:20:52Z" finished-at="2014-04-27T15:20:55Z">
+        <test-method status="PASS" signature="int_Integer_Arrays()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="int_Integer_Arrays" duration-ms="2724" started-at="2014-04-28T08:02:45Z" finished-at="2014-04-28T08:02:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- int_Integer_Arrays -->
-        <test-method status="PASS" signature="noOrderFailure()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="noOrderFailure" duration-ms="2510" started-at="2014-04-27T15:20:55Z" finished-at="2014-04-27T15:20:57Z">
+        <test-method status="PASS" signature="noOrderFailure()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="noOrderFailure" duration-ms="1885" started-at="2014-04-28T08:02:48Z" finished-at="2014-04-28T08:02:50Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Arrays not equal: [a, b, b] and [a, a, b]]]>
@@ -285,11 +285,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noOrderFailure -->
-        <test-method status="PASS" signature="noOrderSuccess()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="noOrderSuccess" duration-ms="2579" started-at="2014-04-27T15:20:57Z" finished-at="2014-04-27T15:21:00Z">
+        <test-method status="PASS" signature="noOrderSuccess()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="noOrderSuccess" duration-ms="532" started-at="2014-04-28T08:02:50Z" finished-at="2014-04-28T08:02:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noOrderSuccess -->
-        <test-method status="PASS" signature="setsSuccess()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="setsSuccess" duration-ms="746" started-at="2014-04-27T15:21:00Z" finished-at="2014-04-27T15:21:00Z">
+        <test-method status="PASS" signature="setsSuccess()[pri:0, instance:qa.tests.AssertTests2@23223dd8]" name="setsSuccess" duration-ms="1673" started-at="2014-04-28T08:02:50Z" finished-at="2014-04-28T08:02:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setsSuccess -->

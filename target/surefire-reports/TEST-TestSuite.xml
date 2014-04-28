@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="15.819" tests="16" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="16.62" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="13.1.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7533"/>
+    <property name="idea.launcher.port" value="7532"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -63,20 +63,20 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="arraysFailures_1" classname="qa.tests.AssertTests2" time="0.566"/>
-  <testcase name="arraysFailures_1" classname="qa.tests.AssertTests1" time="0.226"/>
-  <testcase name="arraysFailures_2" classname="qa.tests.AssertTests2" time="1.384"/>
-  <testcase name="arraysFailures_2" classname="qa.tests.AssertTests1" time="0.34"/>
-  <testcase name="arraysFailures_3" classname="qa.tests.AssertTests1" time="0.558"/>
-  <testcase name="arraysFailures_3" classname="qa.tests.AssertTests2" time="1.562"/>
-  <testcase name="intArray_Issue4" classname="qa.tests.AssertTests1" time="0.432"/>
-  <testcase name="intArray_Issue4" classname="qa.tests.AssertTests2" time="1.351"/>
-  <testcase name="int_Integer_Arrays" classname="qa.tests.AssertTests1" time="0.135"/>
-  <testcase name="int_Integer_Arrays" classname="qa.tests.AssertTests2" time="1.997"/>
-  <testcase name="noOrderFailure" classname="qa.tests.AssertTests1" time="0.266"/>
-  <testcase name="noOrderSuccess" classname="qa.tests.AssertTests1" time="1.05"/>
-  <testcase name="noOrderFailure" classname="qa.tests.AssertTests2" time="1.192"/>
-  <testcase name="setsSuccess" classname="qa.tests.AssertTests1" time="1.436"/>
-  <testcase name="noOrderSuccess" classname="qa.tests.AssertTests2" time="2.579"/>
-  <testcase name="setsSuccess" classname="qa.tests.AssertTests2" time="0.745"/>
+  <testcase name="arraysFailures_1" classname="qa.tests.AssertTests1" time="2.375"/>
+  <testcase name="arraysFailures_1" classname="qa.tests.AssertTests2" time="0.111"/>
+  <testcase name="arraysFailures_2" classname="qa.tests.AssertTests2" time="1.078"/>
+  <testcase name="arraysFailures_2" classname="qa.tests.AssertTests1" time="0.803"/>
+  <testcase name="arraysFailures_3" classname="qa.tests.AssertTests2" time="1.439"/>
+  <testcase name="arraysFailures_3" classname="qa.tests.AssertTests1" time="1.043"/>
+  <testcase name="intArray_Issue4" classname="qa.tests.AssertTests1" time="1.015"/>
+  <testcase name="intArray_Issue4" classname="qa.tests.AssertTests2" time="0.376"/>
+  <testcase name="int_Integer_Arrays" classname="qa.tests.AssertTests1" time="0.663"/>
+  <testcase name="noOrderFailure" classname="qa.tests.AssertTests1" time="2.034"/>
+  <testcase name="int_Integer_Arrays" classname="qa.tests.AssertTests2" time="0.024"/>
+  <testcase name="noOrderSuccess" classname="qa.tests.AssertTests1" time="1.187"/>
+  <testcase name="noOrderFailure" classname="qa.tests.AssertTests2" time="0.696"/>
+  <testcase name="noOrderSuccess" classname="qa.tests.AssertTests2" time="0.532"/>
+  <testcase name="setsSuccess" classname="qa.tests.AssertTests1" time="1.571"/>
+  <testcase name="setsSuccess" classname="qa.tests.AssertTests2" time="1.673"/>
 </testsuite>
