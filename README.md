@@ -13,7 +13,7 @@ features
 3. Each test duration is shown in seconds.
 4. Report name and date is shown at the top.
 5. Added name column to show test name.
-6. Added examples of Skip and Failure to sample screenshot (see below).
+6. Added examples of Skip, DataProvider, and Failure to sample screenshot (see below).
 
 example 
 =========================
