@@ -4,4 +4,5 @@ qa\test\CustomReport$TestResult$1.class
 qa\test\BaseTest.class
 qa\test\CustomReport$MethodResult.class
 qa\test\CustomReport.class
+qa\test\Data.class
 qa\test\CustomReport$ClassResult.class

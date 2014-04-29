@@ -8,7 +8,7 @@
     <classes>
       <class name="qa.tests.SkipTest">
         <methods>
-          <include name="testSkipException"/>
+          <include name="testSkipException" invocation-numbers="0 1"/>
           <include name="setName"/>
         </methods>
       </class> <!-- qa.tests.SkipTest -->

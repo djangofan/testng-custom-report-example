@@ -2,7 +2,7 @@ package qa.test;
 
 import org.testng.ITest;
 
-public class BaseTest implements ITest
+public abstract class BaseTest implements ITest
 {
 
     private String testName;

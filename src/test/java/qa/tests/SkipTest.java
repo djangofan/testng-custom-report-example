@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.internal.annotations.Sets;
 import qa.test.BaseTest;
+import qa.test.Data;
+
 import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
@@ -17,11 +19,11 @@ public class SkipTest extends BaseTest {
     @BeforeMethod
     private void setName()
     {
-        setTestName( UUID.randomUUID().toString().substring(0,8) );
+        setTestName( UUID.randomUUID().toString().substring(0, 8) );
     }
 
-    @Test( enabled = true )
-    public void testSkipException() {
+    @Test( dataProvider = "dp", dataProviderClass = Data.class )
+    public void testSkipException( String testName, Integer num ) {
         randomWait();
         throw new SkipException( "Testing SkipException effect on report output." );
     }
