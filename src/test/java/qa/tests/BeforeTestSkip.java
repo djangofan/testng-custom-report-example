@@ -1,19 +1,22 @@
-package qa.tests; /**
- * Created by austenjt on 4/27/2014.
- */
+package qa.tests;
 
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.testng.internal.annotations.Sets;
-
+import qa.test.BaseTest;
 import java.util.Random;
-import java.util.Set;
+import java.util.UUID;
 
-public class BeforeTestSkip {
+public class BeforeTestSkip extends BaseTest {
 
     Random random = new Random();
+
+    @BeforeMethod
+    private void setName()
+    {
+        setTestName( UUID.randomUUID().toString().substring(0,8) );
+    }
 
     @BeforeMethod
     public void setUp()

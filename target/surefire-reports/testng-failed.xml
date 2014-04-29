@@ -6,22 +6,35 @@
   </listeners>
   <test name="Main Test Group(failed)" parallel="classes">
     <classes>
-      <class name="qa.tests.FailTest">
-        <methods>
-          <include name="showFailure"/>
-        </methods>
-      </class> <!-- qa.tests.FailTest -->
       <class name="qa.tests.SkipTest">
         <methods>
           <include name="testSkipException"/>
+          <include name="setName"/>
         </methods>
       </class> <!-- qa.tests.SkipTest -->
+      <class name="qa.tests.FailTest">
+        <methods>
+          <include name="setName"/>
+          <include name="showFailure"/>
+        </methods>
+      </class> <!-- qa.tests.FailTest -->
+      <class name="qa.tests.AssertTests2">
+        <methods>
+          <include name="setName"/>
+        </methods>
+      </class> <!-- qa.tests.AssertTests2 -->
       <class name="qa.tests.BeforeTestSkip">
         <methods>
           <include name="setUp"/>
+          <include name="setName"/>
           <include name="arraysFailures_3"/>
         </methods>
       </class> <!-- qa.tests.BeforeTestSkip -->
+      <class name="qa.tests.AssertTests1">
+        <methods>
+          <include name="setName"/>
+        </methods>
+      </class> <!-- qa.tests.AssertTests1 -->
     </classes>
   </test> <!-- Main Test Group(failed) -->
 </suite> <!-- Failed suite [Main Test Suite] -->

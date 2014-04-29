@@ -1,18 +1,23 @@
-package qa.tests; /**
- * Created by austenjt on 4/27/2014.
- */
+package qa.tests;
 
 import org.testng.Assert;
-import org.testng.SkipException;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.internal.annotations.Sets;
-
+import qa.test.BaseTest;
 import java.util.Random;
 import java.util.Set;
+import java.util.UUID;
 
-public class AssertTests2 {
+public class AssertTests2 extends BaseTest {
 
     Random random = new Random();
+
+    @BeforeMethod
+    private void setName()
+    {
+        setTestName( UUID.randomUUID().toString().substring(0,8) );
+    }
 
     @Test
     public void noOrderSuccess() {
@@ -21,7 +26,6 @@ public class AssertTests2 {
         String[] rto2 = {"List", "BigInteger", "boolean",};
         Assert.assertEqualsNoOrder(rto1, rto2);
     }
-
 
     @Test(expectedExceptions = AssertionError.class)
     public void noOrderFailure() {

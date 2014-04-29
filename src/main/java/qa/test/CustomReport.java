@@ -197,6 +197,7 @@ public class CustomReport implements IReporter {
         writer.print("<tr>");
         writer.print("<th>Class</th>");
         writer.print("<th>Method</th>");
+        writer.print("<th>Name</th>");
         writer.print("<th>Start</th>");
         writer.print("<th>Seconds</th>");
         writer.print("</tr>");
@@ -205,7 +206,7 @@ public class CustomReport implements IReporter {
         int testIndex = 0;
         int scenarioIndex = 0;
         for ( SuiteResult suiteResult : suiteResults ) {
-            writer.print("<tbody><tr><th colspan=\"4\">");
+            writer.print("<tbody><tr><th colspan=\"5\">");
             writer.print( Utils.escapeHtml( suiteResult.getSuiteName() ) );
             writer.print("</th></tr></tbody>");
 
@@ -214,7 +215,7 @@ public class CustomReport implements IReporter {
                 writer.print(testIndex);
                 writer.print("\">");
 
-                String testName = Utils.escapeHtml(testResult.getTestName());
+                String testName = Utils.escapeHtml( testResult.getTestName() );
 
                 scenarioIndex += writeScenarioSummary(testName
                         + " &#8212; failed (configuration methods)",
@@ -257,7 +258,7 @@ public class CustomReport implements IReporter {
                                      String cssClassPrefix, int startingScenarioIndex ) {
         int scenarioCount = 0;
         if (!classResults.isEmpty()) {
-            writer.print("<tr><th colspan=\"4\">");
+            writer.print("<tr><th colspan=\"5\">");
             writer.print(description);
             writer.print("</th></tr>");
 
@@ -275,10 +276,10 @@ public class CustomReport implements IReporter {
                     int resultsCount = results.size();
                     assert resultsCount > 0;
 
-                    ITestResult firstResult = results.iterator().next();
-                    String methodName = Utils.escapeHtml(firstResult.getMethod().getMethodName());
-                    long start = firstResult.getStartMillis();
-                    long duration = firstResult.getEndMillis() - start;
+                    ITestResult aResult = results.iterator().next();
+                    String methodName = Utils.escapeHtml(aResult.getMethod().getMethodName());
+                    long start = aResult.getStartMillis();
+                    long duration = aResult.getEndMillis() - start;
 
                     // The first method per class shares a row with the class
                     // header
@@ -288,13 +289,13 @@ public class CustomReport implements IReporter {
 
                     }
 
-                    // Write the timing information with the first scenario per
-                    // method
+                    // Write the timing information with the first scenario per method
                     buffer.append("<td><a href=\"#m").append(scenarioIndex)
-                            .append("\">").append(methodName)
-                            .append("</a></td>").append("<td rowspan=\"")
+                            .append("\">").append( methodName + "</a></td>" )
+                            .append( "<td rowspan=\"1\">" + aResult.getName() + "</td>" )
+                            .append( "<td rowspan=\"")
                             .append(resultsCount).append("\">").append( parseUnixTimeToTimeOfDay(start) )
-                            .append("</td>").append("<td rowspan=\"")
+                            .append( "</td>").append("<td rowspan=\"" )
                             .append(resultsCount).append("\">")
                             .append( decimalFormat.format( millisecondsToSeconds( duration ) ) ).append("</td></tr>");
                     scenarioIndex++;
@@ -304,7 +305,8 @@ public class CustomReport implements IReporter {
                         buffer.append("<tr class=\"").append(cssClass)
                                 .append("\">").append("<td><a href=\"#m")
                                 .append(scenarioIndex).append("\">")
-                                .append(methodName).append("</a></td></tr>");
+                                .append( methodName + "</a></td>" )
+                                .append("<td rowspan=\"1\">" + aResult.getName() + "</td></tr>" );
                         scenarioIndex++;
                     }
 
@@ -367,10 +369,11 @@ public class CustomReport implements IReporter {
                 List<ITestResult> results = methodResult.getResults();
                 assert !results.isEmpty();
 
+                ITestResult mResult = results.iterator().next();
                 String label = Utils.escapeHtml( className + "#"
-                     + results.iterator().next().getMethod().getMethodName());
-                for (ITestResult result : results) {
-                    writeScenario(scenarioIndex, label, result);
+                     + mResult.getMethod().getMethodName() + " ( " + mResult.getName() +" )" );
+                for ( ITestResult result : results ) {
+                    writeScenario( scenarioIndex, label, result );
                     scenarioIndex++;
                 }
             }
