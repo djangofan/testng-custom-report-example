@@ -3,6 +3,7 @@ package qa.tests; /**
  */
 
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 import org.testng.internal.annotations.Sets;
 
