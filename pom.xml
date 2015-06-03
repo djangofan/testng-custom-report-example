@@ -8,9 +8,9 @@
     <version>1.0.0</version>
     <properties>
         <jdk.version>1.7</jdk.version>
-        <maven-compiler.version>3.1</maven-compiler.version>
-        <maven-surefire.version>2.16</maven-surefire.version>
-        <testng.version>6.8.8</testng.version>
+        <maven-compiler.version>3.3</maven-compiler.version>
+        <maven-surefire.version>2.18.1</maven-surefire.version>
+        <testng.version>6.9.4</testng.version>
     </properties>
     <build>
         <directory>target</directory>

@@ -4,10 +4,10 @@ import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.testng.internal.annotations.Sets;
 import qa.test.BaseTest;
 import qa.test.Data;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class SkipTest extends BaseTest
@@ -15,7 +15,7 @@ public class SkipTest extends BaseTest
     @BeforeMethod
     private void setName()
     {
-        setTestName( UUID.randomUUID().toString().substring(0, 8) );
+        setTestName(UUID.randomUUID().toString().substring(0, 8));
     }
 
     @Test( dataProvider = "dp", dataProviderClass = Data.class )
@@ -27,8 +27,8 @@ public class SkipTest extends BaseTest
     @Test
     public void setsSuccess() {
         randomWait();
-        Set<Integer> set1 = Sets.newHashSet();
-        Set<Integer> set2 = Sets.newHashSet();
+        List<Integer> set1 = new ArrayList<>();
+        List<Integer> set2 = new ArrayList<>();
         set1.add(1);
         set2.add(1);
         set1.add(3);
