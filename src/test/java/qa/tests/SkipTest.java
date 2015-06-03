@@ -7,15 +7,11 @@ import org.testng.annotations.Test;
 import org.testng.internal.annotations.Sets;
 import qa.test.BaseTest;
 import qa.test.Data;
-
-import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 
-public class SkipTest extends BaseTest {
-
-    Random random = new Random();
-
+public class SkipTest extends BaseTest
+{
     @BeforeMethod
     private void setName()
     {
@@ -41,15 +37,6 @@ public class SkipTest extends BaseTest {
         set2.add(2);
         Assert.assertEquals(set1, set2);
         Assert.assertEquals(set2, set1);
-    }
-
-    private void randomWait() {
-        try {
-            // Sleep a random length of time from 0.5s-3s
-            Thread.sleep( random.nextInt(2500) + 500 );
-        } catch ( InterruptedException e ) {
-            e.printStackTrace();
-        }
     }
 
 }

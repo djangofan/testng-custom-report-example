@@ -5,13 +5,10 @@ import org.testng.SkipException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.test.BaseTest;
-import java.util.Random;
 import java.util.UUID;
 
-public class BeforeTestSkip extends BaseTest {
-
-    Random random = new Random();
-
+public class BeforeTestSkip extends BaseTest
+{
     @BeforeMethod
     private void setName()
     {
@@ -29,15 +26,6 @@ public class BeforeTestSkip extends BaseTest {
         randomWait();
         long[] longArr = {1};
         Assert.assertEquals(Long.valueOf(1), longArr);
-    }
-
-    private void randomWait() {
-        try {
-            // Sleep a random length of time from 0.5s-3s
-            Thread.sleep( random.nextInt(2500) + 500 );
-        } catch ( InterruptedException e ) {
-            e.printStackTrace();
-        }
     }
 
 }

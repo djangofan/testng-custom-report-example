@@ -3,6 +3,7 @@
 <suite name="Main Test Suite" verbose="5" parallel="classes" thread-count="10">
     <listeners>
         <listener class-name="qa.test.CustomReport" />
+        <listener class-name="qa.test.TestNameListener" />
     </listeners>
     <test name="Main Test Group">
         <packages>
