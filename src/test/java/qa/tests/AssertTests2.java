@@ -4,16 +4,17 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.test.BaseTest;
+
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class AssertTests2 extends BaseTest
 {
     @BeforeMethod
-    private void setName()
+    private void setName(Method m)
     {
-        setTestName(UUID.randomUUID().toString().substring(0, 8));
+        setTestName(m.getName());
     }
 
     @Test

@@ -6,16 +6,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import qa.test.BaseTest;
 import qa.test.Data;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class SkipTest extends BaseTest
 {
     @BeforeMethod
-    private void setName()
+    private void setName(Method m)
     {
-        setTestName(UUID.randomUUID().toString().substring(0, 8));
+        setTestName(m.getName());
     }
 
     @Test( dataProvider = "dp", dataProviderClass = Data.class )
